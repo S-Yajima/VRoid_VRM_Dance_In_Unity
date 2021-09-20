@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+
 /*
- * MainCamera ã® è¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«ã‚¢ã‚¿ãƒƒãƒã—ã¦ã‚«ãƒ¡ãƒ©ã®ã‚¢ãƒ³ã‚°ãƒ«ã‚’åˆ¶å¾¡ã™ã‚‹
+ * Main Camera ‚ÌeGameObject‚ÉƒAƒ^ƒbƒ`‚µAƒJƒƒ‰‚ÌƒAƒ“ƒOƒ‹‚ğ‡Ÿ•ÏX‚³‚¹‚é
  */
 public class CameraRotate : MonoBehaviour
 {
-    // ã‚«ãƒ¡ãƒ©ã‚¢ãƒ³ã‚°ãƒ«ã®è§’åº¦ã‚’å¤‰æ›´ã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ç¾¤
+    // MainCamera ‚Ì ƒAƒ“ƒOƒ‹‚ğ•ÏX‚·‚éƒƒ\ƒbƒhŒQ.
     private void RotateStartWorldAxisAdd()
     {
-        // DOTweenã‚’ä½¿ç”¨ã—ã¦ã‚«ãƒ¡ãƒ©ã®è¦ªGameObjectã®Rotateæƒ…å ±ã‚’å¤‰æ›´ã™ã‚‹ã€‚
         transform.DORotate(new Vector3(0, -360f, 0), 15f, RotateMode.WorldAxisAdd);
     }
 
@@ -30,7 +30,6 @@ public class CameraRotate : MonoBehaviour
         transform.DORotate(new Vector3(-65f, 0, 0), 3f, RotateMode.WorldAxisAdd);
     }
 
-
     private void RotateStartWorldAxisAdd_R()
     {
         transform.DORotate(new Vector3(0, 360f, 0), 15f, RotateMode.WorldAxisAdd);
@@ -39,7 +38,6 @@ public class CameraRotate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // ã‚«ãƒ¡ãƒ©ã®è¦–ç‚¹ã‚’é †æ¬¡å¤‰æ›´ã™ã‚‹
         Invoke("RotateStartWorldAxisAdd", 10f);
         Invoke("RotateStartWorldAxisAdd_Up", 25f);
         Invoke("RotateStartWorldAxisAdd", 30f);
